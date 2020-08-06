@@ -1,0 +1,25 @@
+//Registra quando o aluno entrou encontato com o docente
+import Knex from 'knex';
+
+
+export async function up (Knex: Knex){
+    return Knex.schema.createTable('connections', table => {
+        table.increments('id').primary;
+        
+        table.integer('user_id')
+            .notNullable()
+            .references('id')
+            .inTable('users')
+            .onDelete('CASCADE')
+            .onUpdate('CASCADE');
+
+        table.timestamp('created_at')
+            .defaultTo('now()')
+            .notNullable()
+    })
+}
+
+
+export async function down (Knex: Knex){
+    return Knex.schema.dropTable('connections');
+}
