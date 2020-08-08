@@ -14,7 +14,7 @@ export async function up (Knex: Knex){
             .onUpdate('CASCADE');
 
         table.timestamp('created_at')
-            .defaultTo('now()')
+            .defaultTo( Knex.raw('CURRENT_TIMESTAMP'))
             .notNullable()
     })
 }
