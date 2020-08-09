@@ -2,34 +2,50 @@ import React from 'react';
 
 import './styles.css'
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
+import api from '../../services/api';
 
-function TeacherItem() {
-    return(
+export interface Teacher {
+    id: number,
+    subject: string,
+    cost: number,
+    name: string,
+    avatar: string,
+    whatsapp: string,
+    bio: string
+};
+
+interface TeacherItemProps{
+    teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+
+    function createNewConnection(){
+        api.post('connections', {
+            user_id: teacher.id
+        });
+    }
+    return (
         <article className="teacher-item">
-        <header>
-            <img src="https://lh3.googleusercontent.com/DAtV1zzoMieUrO-EI4ZRCl3J63xWpdNW_ppSE25KVm48FcKowvIIxNj-Rb3xdsENf6KY=s83" alt=""/>
-            <div>
-                <strong>Gabriel Amador</strong>
-                <span>Física</span>
-            </div>
-        </header>
+            <header>
+                <img src={teacher.avatar} alt={teacher.name} />
+                <div>
+                    <strong>{teacher.name}</strong>
+                    <span>{teacher.subject}</span>
+                </div>
+            </header>
 
-        <p>
-            Apreciador desde a base ao avançado da Física Moderna 
-            <br/> <br/>
-            Empenhado em ensinar o máximo que a física pode oferecer, embora convenhamos que o conhecimento sempre haverá o que aprender   
-        </p>                   
+            <p>{teacher.bio}</p>
 
-        <footer>
-            <p>preço/hora 
-                <strong> R$ 60,00</strong>
-            </p>
-            <button type="button">
-                <img src={whatsappIcon} alt="Whatsapp"/>
+            <footer>
+                <p>preço/hora <strong> R$ {teacher.cost}</strong></p>
+
+                <a target="_blank" onClick={createNewConnection} href={`https://wa.me/${teacher.whatsapp}`}>
+                    <img src={whatsappIcon} alt="Whatsapp" />
                 Entrar em contato
-            </button>
-        </footer>
-    </article>
+            </a>
+            </footer>
+        </article>
     );
 }
 
