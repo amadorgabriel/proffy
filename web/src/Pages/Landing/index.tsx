@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 
 import logoImg from '../../assets/images/logo.svg';
@@ -11,6 +11,10 @@ import './styles.css';
 
 
 export default function Landing() {
+
+    const[totalConnections, setTotalConnections] = useState(0);
+    
+
     return (
         <div id="page-landing">
             <div id="page-landing-content" className="container">

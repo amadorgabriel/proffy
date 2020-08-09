@@ -4,9 +4,10 @@ import logoImg from '../../assets/images/logo.svg';
 import backIcon from '../../assets/images/icons/back.svg';
 import './styles.css';
 
-//Setando objeto Propriedades estilo Typescript
+//Interface modela um objeto
 interface PageHeaderProps {
-    title: string; 
+    title: string,
+    description?: string
 }
 
 //A constante é do tipo FunctionComponent(FC) e leva como parâmetro o obj acima
@@ -22,6 +23,8 @@ const PageHeader: React.FC<PageHeaderProps> = (props) => {
 
             <div className="header-content">
                 <strong>{props.title}</strong>
+                {props.title && <p> {props.description}</p> }
+
                 {props.children}
             </div>
         </header>
