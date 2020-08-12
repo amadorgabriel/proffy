@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         alignItems: 'center',
         padding: 24,
+        justifyContent: 'flex-start'
     },
     buttonPrimary:{
         backgroundColor: '#9871f5'

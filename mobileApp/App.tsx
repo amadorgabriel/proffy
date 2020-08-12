@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import Landing from './src/pages/Landing/index';
+import AppStack from './src/routes/AppStack';
 
 import { AppLoading } from 'expo';
 import { Archivo_400Regular, Archivo_700Bold, useFonts } from '@expo-google-fonts/archivo';
@@ -21,7 +21,7 @@ export default function App() {
   } else {
     return (
       <Fragment>
-        <Landing />
+        <AppStack />
         <StatusBar style="light" />
       </Fragment>
     );
