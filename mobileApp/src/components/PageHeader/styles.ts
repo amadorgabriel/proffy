@@ -18,7 +18,17 @@ const styles = StyleSheet.create({
         lineHeight: 32,
         marginVertical: 40,
         maxWidth: 160
+    },
+    header:{
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+    },
+    backButtonHeader:{
+        alignItems: 'center',
+        width: 40
     }
+
 })
 
 export default styles;
