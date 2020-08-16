@@ -1,5 +1,5 @@
 import React, { useState, FormEvent } from 'react';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
@@ -32,14 +32,14 @@ export default function TeacherForm() {
         ])
     }
 
-    function handleCreateClass(event:FormEvent){
+    function handleCreateClass(event: FormEvent) {
         event.preventDefault();
 
         api.post('classes', {
             name: name,
             avatar: avatar,
             whatsapp: whatsapp,
-            bio: bio, 
+            bio: bio,
             subject: subject,
             cost: Number(cost),
             schedule: scheduleItems
@@ -51,10 +51,10 @@ export default function TeacherForm() {
         })
     };
 
-    function setScheduleItemValue(position:number, field:string, value:string){
-        const updatedScheduleItems = scheduleItems.map((element, index) =>{
-            if(index === position){
-                return {...element, [field]:value }
+    function setScheduleItemValue(position: number, field: string, value: string) {
+        const updatedScheduleItems = scheduleItems.map((element, index) => {
+            if (index === position) {
+                return { ...element, [field]: value }
             }
             return element;
         })
@@ -166,19 +166,19 @@ export default function TeacherForm() {
                                         ]}
                                     />
 
-                                    <Input 
+                                    <Input
                                         required
-                                        name="from" 
-                                        label="Das" 
-                                        type="time" 
+                                        name="from"
+                                        label="Das"
+                                        type="time"
                                         value={element.from}
                                         onChange={e => setScheduleItemValue(index, 'from', e.target.value)}
                                     />
-                                    <Input 
+                                    <Input
                                         required
-                                        name="to" 
-                                        label="Até" 
-                                        type="time" 
+                                        name="to"
+                                        label="Até"
+                                        type="time"
                                         value={element.to}
                                         onChange={e => setScheduleItemValue(index, 'to', e.target.value)}
                                     />
@@ -198,7 +198,7 @@ export default function TeacherForm() {
 
                         <button type="submit">
                             Salvar Cadastro
-                    </button>
+                        </button>
                     </footer>
                 </form>
             </main>
