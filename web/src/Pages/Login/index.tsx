@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles.css';
@@ -26,11 +26,16 @@ function Login() {
         }
     }
 
+    function handleLogin(event:FormEvent){
+        event.preventDefault();
+
+    }
+
     return (
         <LayoutBackground bgSide={0} >
 
             <div className="form-side1">
-                <form className="form">
+                <form className="form" onSubmit={handleLogin}>
                     <h1>Fazer login</h1>
 
                     <fieldset>

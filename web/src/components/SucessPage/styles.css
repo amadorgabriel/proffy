@@ -1,0 +1,71 @@
+.sucess-bg {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+}
+
+.sucess-bg > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 75vh;
+  width: 70vw;
+  background: url("../../assets/images/success-background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.sucess-bg img {
+  height: 110px;
+  width: 110px;
+  margin-bottom: 4rem;
+}
+
+.sucess-bg div h1 {
+  font: bold 5.5rem Archivo;
+  line-height: 4.3rem;
+  color: var(--color-title-in-primary);
+  margin-bottom: 2rem;
+}
+
+.sucess-bg div p {
+  font: normal 1.8rem Poppins;
+  line-height: 2.6rem;
+  color: var(--color-text-in-primary);
+  max-width: 420px;
+  margin-bottom: 6rem;
+}
+
+.sucess-bg div button {
+  margin: 0 auto;
+  width:180px;
+  height: 5.6rem;
+  border: 0;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  line-height: 2.6rem;
+  font: 600 1.6rem Archivo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+  background: var(--color-secundary);
+  color: var(--color-button-text);
+}
+
+.sucess-bg div a{
+    text-decoration: none;
+
+}
+
+.sucess-bg div button:hover {
+  background: var(--color-secundary-dark);
+}

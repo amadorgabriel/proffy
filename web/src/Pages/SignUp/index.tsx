@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FormEvent } from 'react';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import './styles.css';
 import arrowBackIcon from '../../assets/images/icons/arrow-back.svg'
 import viewContentIcon from '../../assets/images/icons/view-password.svg';
 import hideContentIcon from '../../assets/images/icons/hide-password.svg';
 import LayoutBackground from '../../components/LayoutBackground';
+import { DataSucessProps } from '../../components/SucessPage/index';
+
 
 function SignUp() {
+
+    const history = useHistory();
 
     const [showPassword, setShowPassword] = useState(false);
     const [isDisabled, setIsDisabled] = useState(true);
@@ -29,6 +34,18 @@ function SignUp() {
         }
     }
 
+    function handleRegisterUser(event:FormEvent){
+        event.preventDefault();
+
+        DataSucessProps.title = "Cadastro concluído";
+        DataSucessProps.description = 'Agora você faz parte da plataforma da Proffy. Tenha uma ótima experiência.';
+        DataSucessProps.buttonText = 'Fazer login';
+        DataSucessProps.redirectButton = '/';
+        
+
+        history.push('/sucess');
+    }
+
     return (
         <LayoutBackground bgSide={1}>
 
@@ -39,7 +56,7 @@ function SignUp() {
                     </Link>
                 </div>
 
-                <form className="form">
+                <form onSubmit={handleRegisterUser} className="form">
                     <h1>Cadastro</h1>
                     <p>Preencha os dados abaixo para começar.</p>
 
