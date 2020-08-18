@@ -5,12 +5,14 @@ import Home from './Landing';
 import TeacherList from './TeacherList';
 import TeacherForm from './TeacherForm';
 import Login from './Login';
+import SignUp from './SignUp';
 
 
 export default function Routes() {
     return (
         <BrowserRouter>
             <Route exact path="/" component={Login} />
+            <Route path="/signup" component={SignUp} />
 
             <Route path="/home" component={Home} />
             <Route path="/study" component={TeacherList} />

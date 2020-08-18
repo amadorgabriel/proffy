@@ -1,0 +1,165 @@
+
+.form-side2 {
+  height: 100vh;
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: var(--color-background);
+}
+
+.arrow-back{
+  cursor: pointer;
+  display: flex;
+  align-self: flex-start;
+}
+
+.divBack{
+  width: 350px;
+  margin-top: -4rem;
+}
+
+.form {
+  min-width: 350px;
+}
+
+.form h1 {
+  color: var(--color-text-title);
+}
+
+.form > p {
+  font-family: Poppins;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  max-width: 250px;
+  margin-top: 1rem;
+}
+
+.form fieldset {
+  border: none;
+  margin-top: 3rem;
+}
+
+.form fieldset div + div {
+  display: flex;
+}
+
+.block-input {
+  position: relative;
+  overflow: hidden;
+}
+
+.block-input input {
+  width: 100%;
+  height: 70px;
+  padding-left: 20px;
+  padding-top: 15px;
+
+  border: 2px solid var(--color-line-in-white);
+  color: var(--color-text-base);
+  outline: 0;
+}
+
+.form fieldset .block-input input[name="nome"] {
+  border-radius: 10px 10px 0px 0px;
+}
+.form fieldset .block-input input[name="sobrenome"],
+.form fieldset .block-input input[name="email"] {
+  border-radius: 0px;
+  border-top: 0;
+}
+
+.form fieldset .block-input input[name="senha"] {
+  border-radius: 0px 0px 0px 10px;
+  border: 2px solid var(--color-line-in-white);
+  border-top: none;
+  border-right: none;
+}
+
+.block-input label {
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  font: normal 1.6rem Poppins;
+  color: var(--color-text-complement);
+  line-height: 2rem;
+}
+
+.block-input label::before {
+  content: "";
+  position: absolute;
+  height: 70%;
+  width: 10px;
+  border-left: 2.5px solid var(--color-primary);
+  left: -19px;
+  transform: translateY(-150%);
+  transition: transform 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 35px;
+  transition: all 0.3s ease;
+}
+
+.block-input input:focus + .label-input .content-name,
+.block-input input:valid + .label-input .content-name {
+  transform: translateY(-100%);
+  font-size: 1.2rem;
+  color: var(--color-primary-darker);
+}
+
+.block-input input:focus + .label-input::before,
+.block-input input:valid + .label-input::before {
+  transform: translateY(0%);
+}
+
+.input-password {
+  display: flex;
+  border-radius: 0px 0px 10px 10px;
+  border: 2px solid var(--color-line-in-white);
+  border-left: 0;
+  border-top: 0;
+  background: var(--color-box-base);
+}
+
+.input-password img {
+  padding: 0 2rem;
+  cursor: pointer;
+}
+
+.form button {
+  margin: 0 auto;
+  width: 100%;
+  height: 5.6rem;
+  border: 0;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  line-height: 2.6rem;
+  font: 600 1.6rem Archivo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  margin-top: 4rem;
+}
+
+.buttonSubmit {
+  background: var(--color-secundary);
+  color: var(--color-button-text);
+}
+
+.buttonSubmit:hover {
+  background: var(--color-secundary-dark);
+}
+
+.disabledButtonSubmit {
+  background: var(--color-text-in-primary);
+  color: var(--color-text-title);
+}
