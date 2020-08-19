@@ -1,6 +1,5 @@
 import React, { useState, useEffect, FormEvent } from 'react';
-import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import './styles.css';
 import arrowBackIcon from '../../assets/images/icons/arrow-back.svg'
@@ -41,7 +40,6 @@ function SignUp() {
         DataSucessProps.description = 'Agora você faz parte da plataforma da Proffy. Tenha uma ótima experiência.';
         DataSucessProps.buttonText = 'Fazer login';
         DataSucessProps.redirectButton = '/';
-        
 
         history.push('/sucess');
     }

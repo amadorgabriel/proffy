@@ -1,0 +1,19 @@
+.back-div {
+  width: 350px;
+  margin-top: -13rem;
+}
+
+.h1 {
+  color: var(--color-text-title);
+    max-width: 250px;
+}
+
+.description {
+  font-family: Poppins;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  min-width: 400px;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+

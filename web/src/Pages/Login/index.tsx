@@ -1,5 +1,5 @@
 import React, { useState, useEffect, FormEvent } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import './styles.css';
 import heartIcon from '../../assets/images/icons/gray-heart.svg';
@@ -8,6 +8,8 @@ import hideContentIcon from '../../assets/images/icons/hide-password.svg';
 import LayoutBackground from '../../components/LayoutBackground';
 
 function Login() {
+
+    const history = useHistory();
 
     const [showPassword, setShowPassword] = useState(false);
     const [isDisabled, setIsDisabled] = useState(true);
@@ -26,9 +28,10 @@ function Login() {
         }
     }
 
-    function handleLogin(event:FormEvent){
+    function handleLogin(event: FormEvent) {
         event.preventDefault();
 
+        history.push('/home');
     }
 
     return (
@@ -89,7 +92,9 @@ function Login() {
                             <span className="checkmark"></span>
                         </label>
 
-                        <a href="#">Esqueci minha senha</a>
+                        <Link to="/forgot-password">
+                            Esqueci minha senha
+                        </Link>
                     </div>
 
                     <button type="submit" className={isDisabled ? "disabledButtonSubmit" : "buttonSubmit"} disabled={isDisabled}>Entrar</button>

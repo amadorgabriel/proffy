@@ -7,6 +7,7 @@ import TeacherForm from './TeacherForm';
 import Login from './Login';
 import SignUp from './SignUp';
 import SucessPage from '../components/SucessPage';
+import ForgotPassword from './ForgotPassword/index';
 
 
 export default function Routes() {
@@ -15,6 +16,7 @@ export default function Routes() {
             <Route exact path="/" component={Login} />
             <Route path="/signup" component={SignUp} />
             <Route path="/sucess" component={SucessPage} />
+            <Route path="/forgot-password" component={ForgotPassword} />
 
             <Route path="/home" component={Home} />
             <Route path="/study" component={TeacherList} />

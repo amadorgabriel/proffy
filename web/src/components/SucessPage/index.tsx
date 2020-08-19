@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles.css'
@@ -15,23 +15,25 @@ export var DataSucessProps = {
     title: '',
     description: '',
     buttonText: '',
-    redirectButton: ''
+    redirectButton: '',
 }
 
-function SucessPage(){
+function SucessPage() {
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [redirectButton, setRedirectButton] = useState('');
     const [buttonText, setButtonText] = useState('');
 
-    useEffect(() =>{
+    useEffect(() => {
+        console.log('Aqui: ' + DataSucessProps.title.length);
+
         setTitle(DataSucessProps.title);
         setDescription(DataSucessProps.description);
         setRedirectButton(DataSucessProps.redirectButton);
-        setButtonText(DataSucessProps.buttonText)
+        setButtonText(DataSucessProps.buttonText);
 
-    },[DataSucessProps])
+    }, [DataSucessProps])
 
     return (
         <div className="sucess-bg">
