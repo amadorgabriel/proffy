@@ -5,13 +5,14 @@
 }
 
 .page-header .top-bar-container{
-    width: 90%;
+    background-color: var(--color-primary-dark);
+    min-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--color-text-in-primary);
-    padding: 1.6rem 0;
+    padding: 1.6rem 15rem;
 }
 
 .page-header .top-bar-container > img{ 
@@ -34,18 +35,64 @@
     margin: 3.2rem auto;
 }
 
-.page-header .header-content strong{
+.page-header .header-content div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
     font: 700 3.6rem Archivo;
     line-height: 4.2rem;
     color: var(--color-title-in-primary);
 }
 
-.page-header .header-content p{
-    max-width: 30rem;
+.header-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-header .header-content div p{
+    max-width: 300px;
+    display: flex;
     font-size: 1.6rem;
     line-height: 2.6rem;
-    color: var(--color-title-in-primary);
+    color: var(--color-text-in-primary);
     margin-top: 2.4rem;
+}
+
+.emoji-area{
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font: normal 1.2rem Poppins;
+    line-height: 20rem;
+    color: var(--color-text-in-primary);
+}
+
+.emoji-title-area{
+    max-width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font: normal 1.2rem Poppins;
+    line-height: 20rem;
+    color: var(--color-text-in-primary); 
+}
+
+.emoji-area img, .emoji-title-area img{
+    height: 32px;
+    width: 32px;
+    margin-right: 2rem;
+    margin-top: 2.4rem;
+
 }
 
 @media(min-width: 700px){

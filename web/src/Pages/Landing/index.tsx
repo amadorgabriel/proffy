@@ -34,7 +34,7 @@ export default function Landing() {
                         <p>Gabriel Amador</p>
                     </div>
 
-                    <button className="logout-btn"> 
+                    <button onClick={(e) => alert('Você saiu!')} className="logout-btn">
                         <img src={exitIcon} alt="Sair" />
                     </button>
                 </div>
@@ -62,16 +62,18 @@ export default function Landing() {
                     </Link>
                 </div>
 
-                <span className="total-connections">
-                    Total de {totalConnections} conexões já realizadas
+                <div className="texts-info">
+                    <span className="total-connections">
+                        Total de {totalConnections} conexões já realizadas
                     <img src={purpleHeartIcon} alt="Coração Roxo" />
-                </span>
+                    </span>
 
-                <span className="welcome">
-                    Seja bem-vindo.
+                    <span className="welcome">
+                        Seja bem-vindo.
                     <br />
-                    <p> O que deseja fazer?</p>
-                </span>
+                        <p> O que deseja fazer?</p>
+                    </span>
+                </div>
             </div>
         </div>
     )
