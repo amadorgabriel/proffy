@@ -7,7 +7,7 @@ Projeto desenvolvido em paralelo ao evento **[#NLW](https://nextlevelweek.com)**
 
 **:computer: Plataformas:** Aplicação construída responsivamente para web e mobile.   
 
-**:gear:	Tecnologias: **Sistema desenvolvido na stack ReactJs para web, NodeJs no backend, SQLite como banco de dados e React Native para mobile. 
+**:gear:	Tecnologias:** Sistema desenvolvido na stack ReactJs para web, NodeJs no backend, SQLite como banco de dados e React Native para mobile. 
 
 - ReactJs
 - Typescript
@@ -15,7 +15,8 @@ Projeto desenvolvido em paralelo ao evento **[#NLW](https://nextlevelweek.com)**
 - SqLite3
 - NodeJs
 
-
+ 
+ 
 ## :scroll: Preview
 
 **- Web**:
